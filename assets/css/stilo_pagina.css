@@ -1,0 +1,8 @@
+body{
+    background-color: rgb(238, 229, 229);
+    color: black;
+}
+
+.img-redonda {
+    border-radius: 100%;
+}
