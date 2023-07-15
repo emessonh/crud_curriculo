@@ -1,3 +1,8 @@
+<?php
+  session_start();
+  require_once 'acoes/verifica-logado.php';
+?>
+
 <!doctype html>
 <html lang="pt-BR">
   <head>
@@ -166,7 +171,7 @@
         </a>
       </div>
       <p>
-        &copy; 2023 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a>
+        &copy; 2023 Company, Inc.
       </p>
     </footer>
   </main>

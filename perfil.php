@@ -1,7 +1,7 @@
 <?php
   session_start();
-  include_once 'acoes/consulta_usuario.php';
-  
+  require_once 'acoes/verifica-logado.php';
+  include_once 'acoes/consulta_usuario.php'; 
 ?>
 
 <!DOCTYPE html>

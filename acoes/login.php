@@ -19,11 +19,8 @@
             $dados = mysqli_fetch_array($resultado);
 
             // salva as variáveis de sessao
-            $_SESSION['mensagem'] = 'Login efetuado com sucesso';
-            $_SESSION['status'] = 'success';
             $_SESSION['idusuario'] = $dados["idusuarios"];
             $_SESSION['email'] = $dados["email"];
-            var_dump($_SESSION['email']);
             header('Location: ../painel.php');
         }else{
             $_SESSION['mensagem'] = 'Erro ao efetuar login! Email e ou senha incorretos!';
