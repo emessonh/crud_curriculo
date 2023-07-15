@@ -40,7 +40,7 @@
     <div class='alert'> Não tem login? <a class='btn btn-lg btn-warning' href='cadastrar-usuario.php'> Cadastre-se </a> </div>
 
     <button class="w-100 btn btn-lg btn-primary" name="bt_entrar" type="submit">Entrar</button>
-    <p class="mt-5 mb-3 text-muted"> Edson Maia &copy; 2021</p>
+    <p class="mt-5 mb-3 text-muted"> Emesson &copy; 2023</p>
 
     <?php 
       include_once "acoes/escrever-mensagem.php";

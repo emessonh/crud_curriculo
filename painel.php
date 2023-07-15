@@ -62,12 +62,9 @@
           </div>
         </div>
       </nav>
+      
     </header>
-
   <main>
-    <div class="container-fluid">
-      <?php include_once "acoes/escrever-mensagem.php"?>
-    </div>
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-indicators">
         <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -159,7 +156,7 @@
 
 
     </div><!-- /.container -->
-
+  
 
     <!-- FOOTER -->
     <footer class="container">

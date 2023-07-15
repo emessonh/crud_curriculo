@@ -1,5 +1,5 @@
 <?php 
-  //session_start();
+  session_start();
   $id_logado = $_SESSION['idusuario'];
   $email_logado = $_SESSION["email"];
 ?>
@@ -44,6 +44,10 @@
   </div>
 </nav>
 
+<?php 
+    include_once "acoes/escrever-mensagem.php";
+?>
+
 <!-- container fluido 100% -->
 <div class="container-fluid bg1 text-center" id="quem">
 
@@ -55,9 +59,7 @@
 
       <div class="col-md-12">
         <label for="nivel" class="form-label">Nível de Escolaridade</label> 
-        <?php 
-            echo $_SESSION['idusuario'];
-        ?>
+        
         <select class="form-select" id="nivel" name="nivel" autofocus required>
           <option value="Ensino Médio">Ensino Médio</option>
           <option value="Ensino Técnico">Ensino Técnico</option>
@@ -70,9 +72,6 @@
           Escolha o nível de escolaridade.
           
           
-        </div>
-        <div>
-          <input type="hidden" id="idusuario" name="idusuario" value="<?= $id_logado; ?>">
         </div>
       </div>
 
@@ -93,6 +92,16 @@
       </div>
 
       <div class="col-md-12">
+        <label for="situacao" class="form-label">Situação</label>
+        <select class="form-select" id="situacao" name="situacao" required>
+          <option value="Cursando">Cursando</option>
+          <option value="Concluído">Concluído</option>
+        </select>
+        <div class="invalid-feedback">
+          Escolha a situação do seu curso.
+      </div>
+
+      <div class="col-md-12">
         <label for="ano_curso" class="form-label">Ano do Início</label>
         <input type="number" class="form-control" id="ano_inicio" name="ano_inicio" min="1950" max="2050" step="1" required>
         <div class="invalid-feedback">
@@ -108,17 +117,8 @@
         </div>
       </div>
 
-      <div class="col-md-12">
-        <label for="situacao" class="form-label">Situação</label>
-        <select class="form-select" id="situacao" name="situacao" required>
-          <option value="Cursando">Cursando</option>
-          <option value="Concluído">Concluído</option>
-        </select>
-        <div class="invalid-feedback">
-          Escolha a situação do seu curso.
-        </div>
       </div>
-        <input type="text" id="idusuario" name="idusuario" value="<?= $id_logado; ?>"/>
+        <input type="hidden" id="idusuario" name="idusuario" value="<?= $id_logado; ?>"/>
       </div>
       <br>
       <button class="w-100 btn btn-primary btn-lg" type="submit" name="bt_cadastrar_formacao">

@@ -16,11 +16,11 @@
         {
             $_SESSION['mensagem'] = "Cadastro realizado com sucesso<br>";
             $_SESSION['status'] = 'success';
-            header("Location: ../painel.php");   
+            header("Location: ../cadastrar-curso.php");   
         }else{
             $_SESSION['mensagem'] = "Falha ao realizar o cadastro<br>";
             $_SESSION['status'] = 'danger';
-            header("Location: ../painel.php");   
+            header("Location: ../cadastrar-curso.php");   
         }
         mysqli_close($con);
     }

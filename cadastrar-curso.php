@@ -42,6 +42,9 @@
         </ul>
     </div>
   </div>
+  <div class="container-fluid">
+    <?php include_once "acoes/escrever-mensagem.php"?>
+  </div>
 </nav>
 
 <!-- container fluido 100% -->
@@ -80,7 +83,7 @@
       </div>
       <br>
       <div>
-        <input type="text" name="email" id="email" value="<?= $id_logado; ?>">
+        <input type="hidden" name="email" id="email" value="<?= $id_logado; ?>">
       </div>
       <button class="w-100 btn btn-primary btn-lg" type="submit" name="bt_cadastrar">
       Cadastrar
