@@ -44,25 +44,14 @@
   </div>
 </nav>
 
+<div>
+    <?php include_once "acoes/escrever-mensagem.php"?>
+</div>
 <!-- container fluido 100% -->
 <div class="container-fluid bg2 text-center" id="div-cursos">
   <h3> <i class="bi bi-book"></i> Cursos </h3>
   <ul class="list-group lista" style="color:#222;">
-    <li class="list-group-item">
-      <a href="editar_curso.php?id=''"><i class="bi bi-pencil-square"></i></a>
-      <a href="apagar_curso.php?id=''" data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-trash"></i></a>
-      Nome do Curso 1
-    </li>
-    <li class="list-group-item">
-    <a href="editar_curso.php?id=''"><i class="bi bi-pencil-square"></i></a>
-      <a href="apagar_curso.php?id=''" data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-trash"></i></a>
-      Nome do Curso 2
-    </li>
-    <li class="list-group-item">
-    <a href="editar_curso.php?id=''"><i class="bi bi-pencil-square"></i></a>
-      <a href="apagar_curso.php?id=''" data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-trash"></i></a>
-      Nome do Curso 3
-    </li>
+    <?php include_once 'acoes/consulta-cursos.php'; ?>
   </ul>
 
 <!-- modal OBS mudar o numero no id para ficar igual id no banco de dados -->

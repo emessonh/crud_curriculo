@@ -44,26 +44,14 @@
     </div>
   </div>
 </nav>
-
+<?php 
+    include_once "acoes/escrever-mensagem.php";
+?>
 <!-- container fluido 100% -->
 <div class="container-fluid bg2 text-center" id="div-formacoes">
   <h3> <i class="bi bi-easel"></i> Formação </h3>
   <ul class="list-group lista" style="color:#222;">
-    <li class="list-group-item">
-      <a href="editar_formacao.php?id=''"><i class="bi bi-pencil-square"></i></a>
-      <a href="apagar_formacao.php?id=''" data-bs-toggle="modal" data-bs-target="#exampleModal1"><i class="bi bi-trash"></i></a>
-      Nome da formação 1
-    </li>
-    <li class="list-group-item">
-      <a href="editar_formacao.php?id=''"><i class="bi bi-pencil-square"></i></a>
-      <a href="apagar_formacao.php?id=''" data-bs-toggle="modal" data-bs-target="#exampleModal2"><i class="bi bi-trash"></i></a>
-      Nome da formação 2
-    </li>
-    <li class="list-group-item">
-      <a href="editar_formacao.php?id=''"><i class="bi bi-pencil-square"></i></a>
-      <a href="apagar_formacao.php?id=''" data-bs-toggle="modal" data-bs-target="#exampleModal3"><i class="bi bi-trash"></i></a>
-      Nome da formação 3
-    </li>
+    <?php include_once 'acoes/consulta-formacoes.php'; ?>
   </ul>
 
 <!-- modal OBS mudar o numero no id para ficar igual id no banco de dados -->
