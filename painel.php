@@ -9,6 +9,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
+    <link rel="icon" href="images/favicon.ico">
     <meta name="author" content="Emesson Horácio">
     <title>Curriculo - Online</title>
 
@@ -56,6 +57,10 @@
             
             <link rel="stylesheet" href="assets/css/geral.css">
             <link rel="stylesheet" href="assets/css/bt_logout.css">
+
+            <div class='email_usuario'>
+              <?= $_SESSION['email']; ?>
+            </div>
             <a href="acoes/logout.php">
               <button class="Btn">
         
@@ -85,7 +90,7 @@
               <h1>Cadastre suas formações</h1>
               
               <p>Mantenha suas formações sempre atualizadas</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Saiba mais</a></p>
+              <p><a class="btn btn-lg btn-primary" href="cadastrar-formacao.php">Cadastrar</a></p>
             </div>
           </div>
         </div>
@@ -96,7 +101,7 @@
             <div class="carousel-caption">
               <h1>Cadastre seus cursos</h1>
               <p>Faça a atualização dos seus cursos</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Saiba mais</a></p>
+              <p><a class="btn btn-lg btn-primary" href="cadastrar-curso.php">Cadastrar</a></p>
             </div>
           </div>
         </div>
@@ -106,7 +111,7 @@
             <div class="carousel-caption">
               <h1>Atualize seu perfil</h1>
               <p>Mantenha seus dados atualizados</p>
-              <p><a class="btn btn-lg btn-primary" href="#">Saiba mais</a></p>
+              <p><a class="btn btn-lg btn-primary" href="perfil.php">Atualizar perfil</a></p>
             </div>
           </div>
         </div>

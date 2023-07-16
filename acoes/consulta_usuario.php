@@ -16,6 +16,7 @@
    $endereco = $dados['endereco'];
    $celular = $dados['celular'];
    $email = $dados['email']; 
+   $foto = $dados['foto'];
 
    $_SESSION['nome'] = $nome;
    $_SESSION['nacionalidade'] = $nacionalidade;
@@ -24,3 +25,4 @@
    $_SESSION['endereco'] = $endereco;
    $_SESSION['celular'] = $celular;
    $_SESSION['email'] = $email; 
+   $_SESSION['foto'] = $foto;

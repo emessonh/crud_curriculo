@@ -43,10 +43,11 @@
         </ul>
     </div>
   </div>
-  <div class="container-fluid">
-    <?php include_once "acoes/escrever-mensagem.php"?>
-  </div>
 </nav>
+
+<div>
+    <?php include_once "acoes/escrever-mensagem.php"?>
+</div>
 
 <!-- container fluido 100% -->
 <div class="container-fluid bg1 text-center cadcurso" id="quem">

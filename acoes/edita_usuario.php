@@ -12,6 +12,11 @@
         $endereco = mysqli_real_escape_string($con, $_POST['endereco']);
         $celular = mysqli_real_escape_string($con, $_POST['celular']);
         $email = mysqli_real_escape_string($con, $_POST['email']);
+        $foto = mysqli_real_escape_string($con, $_FILES['foto']['name']);
+        $tipo = mysqli_real_escape_string($con, $_FILES['foto']['tmp_name']);
+
+        require_once 'upload.php';
+        
 
         $sql = "UPDATE usuarios SET nome = '$nome',
         nacionalidade = '$nacionalidade',
@@ -19,17 +24,18 @@
         idade = '$idade',
         endereco = '$endereco',
         celular = '$celular',
-        email = '$email'
+        email = '$email',
+        foto = '$foto'
         WHERE idusuarios = '$idusuario'";
 
-        if (mysqli_query($con, $sql))
+        if (mysqli_query($con, $sql) && $_SESSION['status'] != 'danger')
         {
             $_SESSION['mensagem'] = 'Perfil atualizado com sucesso!';
             $_SESSION['status'] = 'success';
             header('Location: ../perfil.php');
         }else{
-            $_SESSION['mensagem'] = 'Erro ao atualizar os dados! Tente novamente!';
-            $_SESSION['status'] = 'danger'; 
+            $_SESSION['mensagem'] = 'Erro ao atualizar os dados! Tente novamente!'; 
+            $_SESSION['status'] = 'danger';
             header('Location: ../perfil.php');
         }
 

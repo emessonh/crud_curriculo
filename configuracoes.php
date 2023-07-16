@@ -32,7 +32,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">NOME</a>
+      <a class="navbar-brand" href="#"><?= $_SESSION['nome']; ?></a>
     </div>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav d-flex justify-content-end" id="links">
@@ -45,9 +45,9 @@
 <!-- container fluido 100% -->
 <div class="container-fluid bg1 text-center" id="quem">
   <h3>Configurações</h3>
-  <img src="images/foto-perfil.jpg" class="img-responsive img-redonda" style="display:inline" alt="Foto" width="200">
-  <h4> Nome Completo </h4>
-  <h4> email@provedor.com </h4>
+  <img src="fotos/<?= $_SESSION['foto']; ?>" class="img-responsive img-redonda" style="display:inline" alt="Foto" width="200">
+  <h4> <?= $_SESSION['nome']; ?> </h4>
+  <h4> <?= $_SESSION['email']; ?> </h4>
   <h4> Deseja alterar sua senha? <i class="bi bi-pencil"></i> </h4>
   <h4> Deseja excluir sua conta? <i class="bi bi-pencil"></i> </h4>
 

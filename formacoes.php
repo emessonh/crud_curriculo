@@ -1,6 +1,8 @@
 <?php
   session_start();
   require_once 'acoes/verifica-logado.php';
+  require_once 'acoes/consulta_usuario.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -32,7 +34,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <a class="navbar-brand" href="#">NOME</a>
+      <a class="navbar-brand" href="#"><?= $_SESSION['nome']; ?></a>
     </div>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="nav navbar-nav d-flex justify-content-end" id="links">

@@ -52,7 +52,7 @@
   ?>
 
   <h3>Quem sou eu? </h3>
-  <img src="images/foto-perfil.jpg" class="img-responsive img-redonda" style="display:inline" alt="Foto" width="200">
+  <img src="fotos/<?= $_SESSION['foto']; ?>" class="img-responsive img-redonda" style="display:inline" alt="Foto" width="200">
   <form action="acoes/edita_usuario.php" method="POST" enctype="multipart/form-data" class="needs-validation container" novalidate>
     <input type="file" name="foto" id="foto" />
 

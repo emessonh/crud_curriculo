@@ -14,9 +14,10 @@
         $celular =  mysqli_real_escape_string($con, $_POST["celular"]);
         $email =  mysqli_real_escape_string($con, $_POST["email"]);
         $senha =  md5(mysqli_real_escape_string($con, $_POST["senha"]));
+        $foto = "../fotos/foto-perfil.jpg";
 
-        $sql = "INSERT INTO usuarios(nome, nacionalidade, estado_civil, idade, endereco, celular, email, senha
-        ) VALUES ('$nome', '$nacionalidade', '$estado_civil', '$idade', '$endereco', '$celular', '$email', '$senha')";
+        $sql = "INSERT INTO usuarios(nome, nacionalidade, estado_civil, idade, endereco, celular, email, senha,
+        foto) VALUES ('$nome', '$nacionalidade', '$estado_civil', '$idade', '$endereco', '$celular', '$email', '$senha', '$foto')";
 
         if (mysqli_query($con, $sql))
         {
