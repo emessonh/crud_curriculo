@@ -36,7 +36,7 @@
             <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
           </div>
           <div class='modal-body'>
-            Deseja apagar a formação {$idformacao} ?
+            Deseja apagar a formação {$nome_curso} ?
           </div>
           <div class='modal-footer'>
             <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>

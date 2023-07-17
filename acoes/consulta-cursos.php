@@ -8,7 +8,7 @@
     //echo "$sql";
     
     $resultado = mysqli_query($con, $sql);
-
+    $indice = 1;
     while($dados = mysqli_fetch_array($resultado)) {
         // criar variaveis para cada dado do array associativo
         $idcurso       = $dados['idcursos'];
@@ -21,7 +21,7 @@
     <li class='list-group-item'>
       <a href='editar-curso.php?id={$idcurso}'><i class='bi bi-pencil-square'></i></a>
       <a href='apaga-curso.php?id={$idcurso}' data-bs-toggle='modal' data-bs-target='#exampleModal{$idcurso}'><i class='bi bi-trash'></i></a>
-      $idcurso - $nome_curso - $instituicao - $ano_curso
+      $indice - $nome_curso - $instituicao - $ano_curso
     </li>
     <!-- modal OBS mudar o numero no id para ficar igual id no banco de dados -->
     <div class='modal fade' id='exampleModal{$idcurso}' tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true'>
@@ -32,7 +32,7 @@
             <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>
           </div>
           <div class='modal-body'>
-            Deseja apagar o curso {$idcurso} ?
+            Deseja apagar o curso {$nome_curso} ?
           </div>
           <div class='modal-footer'>
             <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Cancelar</button>
@@ -47,4 +47,5 @@
       </div>
     </div>
     <!-- fim modal -->";
+    $indice++;
     } // fim while

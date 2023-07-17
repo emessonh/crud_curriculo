@@ -1,6 +1,7 @@
 <?php 
   session_start();
   require_once 'acoes/verifica-logado.php';
+  $idusuario = $_SESSION['idusuario'];
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -43,6 +44,7 @@
 </nav>
 <?php 
     include_once "acoes/escrever-mensagem.php";
+    include_once 'acoes/modal.php';
 ?>
 <!-- container fluido 100% -->
 <div class="container-fluid bg1 text-center" id="quem">
@@ -51,9 +53,11 @@
   <h4> <?= $_SESSION['nome']; ?> </h4>
   <h4> <?= $_SESSION['email']; ?> </h4>
   <h4> Deseja alterar sua senha? <a href="editar-senha.php"><i class="bi bi-pencil"></i></a> </h4>
-  <h4> Deseja excluir sua conta? <a href="acoes/apaga-usuario.php?id=
-  <?=$_SESSION['idusuario'];?>" data-bs-toggle="modal" data-bs-target="#minhaModal<?= $_SESSION['idusuario']; ?>"><i class="bi bi-pencil"></i></a> </h4>
+  <h4> Deseja excluir sua conta? <a href='acoes/apaga-usuario.php' data-bs-toggle='modal' data-bs-target='#exampleModal{$idusuario}'><i class='bi bi-pencil'></i></a> </h4>
 
+  <?php
+    include_once 'acoes/modal.php';
+  ?>
   <a href="#" class="btn btn-light btn-lg bt">
     <i class="bi bi-arrow-up-circle"></i> Topo
   </a>

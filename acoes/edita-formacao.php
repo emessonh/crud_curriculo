@@ -25,9 +25,11 @@
         
         if(mysqli_query($con, $sql)) {
             $_SESSION['mensagem'] = "Formação editada com sucesso!";
+            $_SESSION['status'] = 'success';
             header('Location: ../formacoes.php');
         } else {
             $_SESSION['mensagem'] = "Erro na edição da formação!";
+            $_SESSION['status'] = 'danger';
             header('Location: ../formacoes.php');
         }
         // FECHAR CONEXAO

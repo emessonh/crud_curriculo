@@ -21,6 +21,8 @@
             // salva as variáveis de sessao
             $_SESSION['idusuario'] = $dados["idusuarios"];
             $_SESSION['email'] = $dados["email"];
+            $_SESSION['nome'] = $dados['nome'];
+            $_SESSION['foto'] = $dados['foto'];
             header('Location: ../painel.php');
         }else{
             $_SESSION['mensagem'] = 'Erro ao efetuar login! Email e ou senha incorretos!';

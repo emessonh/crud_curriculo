@@ -51,7 +51,7 @@
                 <a class="nav-link" href="cursos.php">Cursos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="curriculo.php">Currículos</a>
+                <a class="nav-link" href="curriculo.php">Currículo</a>
               </li>
             </ul> 
             

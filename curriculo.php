@@ -41,6 +41,7 @@
             <li><a href="#quem">QUEM</a></li>
             <li><a href="#formacao">FORMAÇÃO</a></li>
             <li><a href="#contatos">CONTATOS</a></li>
+            <li><a href="gerar-pdf.php">GERAR PDF</a></li>
             <li><a href="painel.php">X</a></li>
         </ul>
     </div>
@@ -64,16 +65,18 @@
 <div class="container-fluid bg2 text-center" id="formacao">
   <h3> <i class="bi bi-easel"></i> Formação </h3>
   <ul class="list-group lista" style="color:#222;">
-    <li class="list-group-item"> Nome da formação 1</li>
-    <li class="list-group-item"> Nome da formação 2</li>
-    <li class="list-group-item"> Nome da formação 3</li>
+    <?php
+      include_once 'acoes/consulta-formacao.php';
+      include_once 'acoes/consulta-formacoes.php';
+    ?>
   </ul>
   <br>
   <h3> <i class="bi bi-book"></i> Cursos </h3>
   <ul class="list-group lista" style="color:#222;">
-    <li class="list-group-item"> Nome do Curso 1</li>
-    <li class="list-group-item"> Nome do Curso 2</li>
-    <li class="list-group-item"> Nome do Curso 3</li>
+  <?php
+      include_once 'acoes/consulta-curso.php';
+      include_once 'acoes/consulta-cursos.php';
+    ?>
   </ul>
   <br>
   <a href="#" class="btn btn-light btn-lg bt">

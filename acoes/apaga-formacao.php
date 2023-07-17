@@ -11,9 +11,11 @@
     
     if(mysqli_query($con, $sql)) {
       $_SESSION['mensagem'] = "Formação apagada com sucesso!";
+      $_SESSION['status'] = 'success';
       header('Location: ../formacoes.php');
     } else {
       $_SESSION['mensagem'] = "Não foi possível apagar a formação!";
+      $_SESSION['status'] = 'danger';
       header('Location: ../formacoes.php');
     }
     // FECHAR CONEXAO
